@@ -8,12 +8,11 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int sum = 0;
-        double num = 0;
+        int num = 0;
 
         for (int i = 0; i < 5; i++) {
-            num = Double.parseDouble(st.nextToken());
-            num = (int) Math.pow(num,2);
-            sum += num;
+            num = Integer.parseInt(st.nextToken());
+            sum += num*num;
         }
         int num2 = sum%10;
 
