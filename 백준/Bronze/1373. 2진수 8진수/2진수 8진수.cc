@@ -1,16 +1,19 @@
-#include<stdio.h>
-#include<string.h>
-char a[1000000+3] ={'0', '0' };
-int main()
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
 {
-    scanf("%s",a+2);
-    
-    int alen = strlen(a);
-    int k = 0;
- 
-    for(int i=alen%3; i<alen; i=i+3)
-    {
-        printf("%d", (a[i]-'0')*4 + (a[i+1]-'0')*2 + (a[i+2]-'0')) ;
-    }
- 
+	char num[1000000] = { '0','0', };
+	int i = 0, len = 0;
+
+	scanf("%s", num+2);
+
+	len = strlen(num);
+
+	for (i = len % 3; i < len; i += 3)
+	{
+		printf("%d", (num[i]-'0') * 4 + (num[i+1] - '0') * 2 + (num[i+2] - '0') * 1); // 2진수 8진수로 변환 과정
+	}
+
+	return 0;
 }
